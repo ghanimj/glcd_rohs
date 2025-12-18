@@ -8,7 +8,7 @@ LDFLAGS ?= -nostartfiles -nostdlib --specs nano.specs -lc -lgcc -Wl,--gc-section
 
 FIRMWARE_LD ?= boot/f411re.ld
 FIRMWARE_SOURCES = stm32_main.c rcc.c boot/startup_f411re.c uart.c \
-		   syscalls.c
+		   syscalls.c rohs.c
 FIRMWARE_HEADER = include/rcc.h include/hal.h include/uart.h 
 FIRMWARE_ADDR = 0x08000000
 

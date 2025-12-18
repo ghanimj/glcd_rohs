@@ -75,7 +75,7 @@ static inline void gpio_set_speed(uint32_t pin, uint8_t speed, uint8_t port) {
 	}
 }
 
-static inline void gpio_write_pin(uint8_t port, uint32_t pin, uint8_t val) {
+static inline void gpio_write_pin(uint32_t pin, uint8_t val, uint8_t port) {
 	struct gpio *gpio = GPIO(BANK(port));
 	uint32_t pin_pos = 0x00U;
 	uint32_t bit_pos;
